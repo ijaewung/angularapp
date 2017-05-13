@@ -7,6 +7,11 @@
   background-color: $navbar-bg;
   @include borders($navbar-border);
 
+  .navbar-title {
+    color: $navbar-title-color;
+    padding: $navbar-title-padding;
+  } 
+
   .navbar-brand {
     display: inline-block;
     width: $navbar-brand-width;

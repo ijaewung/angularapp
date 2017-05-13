@@ -1,18 +1,13 @@
 <header class="app-header navbar">
   <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
-  <a class="navbar-brand" href="#"></a>
+  <!--<a class="navbar-brand" href="#"></a>-->
+  <a class="navbar-title"><i class="fa fa-users" style="margin-right:5px"></i> {{title}}</a>
   <ul class="nav navbar-nav d-md-down-none">
     <li class="nav-item">
       <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
     </li>
-    <li class="nav-item px-3">
-      <a class="nav-link" href="#">Dashboard</a>
-    </li>
-    <li class="nav-item px-3">
-      <a class="nav-link" href="#">Users</a>
-    </li>
-    <li class="nav-item px-3">
-      <a class="nav-link" href="#">Settings</a>
+    <li class="nav-item px-3" *ngFor="let menu of menus;">
+      <a class="nav-link" href="#">{{menu.header}}</a>
     </li>
   </ul>
   <ul class="nav navbar-nav ml-auto">
@@ -67,6 +62,17 @@
         <li class="nav-title">
           UI Elements
         </li>
+
+        <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown *ngFor="let navi of navis;">
+        <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-puzzle"></i> {{navi.header}}</a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item" *ngFor="let item of navi.items;">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/dotnet/buttons']"><i class="icon-puzzle"></i> {{item.name}}</a>
+            </li>
+          </ul>
+        </li>
+
+
         <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>
           <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-puzzle"></i> Components</a>
           <ul class="nav-dropdown-items">
