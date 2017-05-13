@@ -34,6 +34,7 @@ export class FullLayoutComponent implements OnInit {
     var navi_1: NaviModel = { header: "닷넷프레임워크", items: [ { name: "Tutorial" }, { name: "Article"}] };
     var navi_2: NaviModel = { header: "넷플릭스", items: [ { name: "House of Cards" }, { name: "Defenders"}] };
     this.navis = [navi_1, navi_2];
+    
   }
 }
 
