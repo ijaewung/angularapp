@@ -31,7 +31,7 @@ export class FullLayoutComponent implements OnInit {
     var users: MenuModel = { header: "Users", url: "", tooltip: "", number: 0, isenabled: true};
     var settings: MenuModel = { header: "Settings", url: "", tooltip: "", number: 0, isenabled: true};
     this.menus = [dashboard, users, settings];
-    var navi_1: NaviModel = { header: "wpf", class: "fa fa-stack-overflow", items: [ { name: "wpf.tutorial" }, { name: "app.kakaotalk"}, { name: "app.stackoverflow"}, { name: "comp.devexpress"}, { name: "comp.infragistics"}] };
+    var navi_1: NaviModel = { header: "wpf", class: "fa fa-stack-overflow", items: [ { name: "wpf.tutorial" }, { name: "app.kakaotalk"}, { name: "app.stackoverflow"}, { name: "app.devexpress"}, { name: "app.infragistics"}] };
     var navi_2: NaviModel = { header: "web", class: "fa fa-edge", items: [ { name: "python.tutorial" }, { name: "angular4.tutorial"}] };
     var navi_3: NaviModel = { header: "netflix", class: "fa fa-file-video-o", items: [ { name: "drm.house of cards" }, { name: "drm.지정생존자"}] };
     var navi_5: NaviModel = { header: "m.c.u", class: "fa fa-film", items: [ 
